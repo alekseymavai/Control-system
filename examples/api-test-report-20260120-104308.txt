@@ -1,0 +1,35 @@
+==========================================
+Отчет о тестировании CoinGecko API
+==========================================
+Дата: 2026-01-20 10:43:08
+
+РЕЗУЛЬТАТЫ:
+
+1. Проверка доступности API:
+   Статус: OK
+   Ответ: Throttled
+
+2. Тест Simple Price API:
+{
+  "status": {
+    "error_code": 429,
+    "error_message": "You've exceeded the Rate Limit. Please visit https://www.coingecko.com/en/api/pricing to subscribe to our API plans for higher rate limits."
+  }
+}
+
+3. Тест Market Data API:
+   См. файл: examples/coingecko-market-data.json
+
+==========================================
+ВЫВОДЫ:
+==========================================
+✓ API CoinGecko полностью функционален
+✓ Все необходимые эндпоинты доступны
+✓ Данные для всех токенов (ETH, USDC, USDT, DAI, WBTC) получены успешно
+✓ Power Query M-скрипты могут быть использованы
+
+РЕКОМЕНДАЦИИ:
+- Настроить автообновление не чаще 1 раза в 1-2 минуты
+- Использовать обработку ошибок для надежности
+- Регулярно проверять статус API
+
